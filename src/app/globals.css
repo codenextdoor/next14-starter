@@ -1,0 +1,36 @@
+:root {
+  --bg: #0d0c22;
+  --bgsoft: #0c0b1d;
+  --col: white;
+  --colsoft: white;
+  --btn: #3673fd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--col);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  background-color: rebeccapurple;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
