@@ -1,9 +1,22 @@
-import styles from "./navlinks.module.css";
+"use client";
 
-const NavLinks = ({ item }) => {
-  return <div className="styles.navlinks">NavLinks</div>;
+import Link from "next/link";
+import styles from "./navlinks.module.css";
+import { usePathname } from "next/navigation";
+
+const NavLink = ({ item }) => {
+  const pathName = usePathname();
+
+  return (
+    <Link
+      href={item.path}
+      className={`${styles.container} ${
+        pathName === item.path && styles.active
+      }`}
+    >
+      {item.title}
+    </Link>
+  );
 };
 
-export default NavLinks;
-
-// 44:18
+export default NavLink;

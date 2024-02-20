@@ -21,15 +21,22 @@ const Links = () => {
       path: "/contact",
     },
   ];
+
+  //temp
+  const session = true;
+  const isAdmin = true;
+
   return (
     <div className={styles.links}>
-      {links.map(
-        (
-          link // added parentheses for the arrow function
-        ) => (
-          <NavLinks item={link} key={link.title} />
-        )
+      {links.map((link) => (
+        <NavLinks item={link} key={link.title} />
+      ))}
+      {session ? (
+        isAdmin && <NavLinks item={{ title: "Admin", path: "/admin" }} />
+      ) : (
+        <NavLinks item={{ title: "Login", path: "/login" }} />
       )}
+      {session && <button className={styles.logout}>Logout</button>}
     </div>
   );
 };

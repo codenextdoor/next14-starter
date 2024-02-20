@@ -1,8 +1,8 @@
 :root {
   --bg: #0d0c22;
   --bgsoft: #0c0b1d;
-  --col: white;
-  --colsoft: white;
+  --text: white;
+  --textSoft: #e5e5e5;
   --btn: #3673fd;
 }
 
@@ -14,7 +14,7 @@
 
 body {
   background-color: var(--bg);
-  color: var(--col);
+  color: var(--text);
 }
 
 a {
